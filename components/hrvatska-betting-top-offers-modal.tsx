@@ -20,7 +20,7 @@ export function HrvatskaBettingTopOffersModal({ sites }: TopOffersModalProps) {
       const timer = setTimeout(() => {
         setIsOpen(true)
         localStorage.setItem("hasVisitedBefore", "true")
-      }, 3000)
+      }, 8000)
 
       return () => clearTimeout(timer)
     }
@@ -58,16 +58,15 @@ export function HrvatskaBettingTopOffersModal({ sites }: TopOffersModalProps) {
 
           <div className="text-center">
             <div className="inline-block px-4 py-1 bg-yellow-400 text-black text-xs uppercase tracking-widest font-bold rounded-full mb-2">
-              Ekskluzivna Preporuka
+              Najbolja Ponuda Dana
             </div>
-            <h2 className="text-xl font-bold text-black">Najbolja Ponuda Dana</h2>
           </div>
         </div>
 
         <div className="bg-white px-6 py-6">
           {/* Logo and site name */}
           <div className="flex flex-col items-center justify-center gap-4 mb-5 pb-5 border-b border-black">
-            <div className="relative bg-white p-2 h-16 w-32 rounded border border-gray-300 overflow-hidden">
+            <div className="relative bg-white p-2 h-32 w-56 rounded border border-gray-300 overflow-hidden">
               <Image
                 src={topSite.logo || "/placeholder.svg"}
                 alt={topSite.name}
@@ -76,7 +75,6 @@ export function HrvatskaBettingTopOffersModal({ sites }: TopOffersModalProps) {
               />
             </div>
             <div>
-              <div className="font-bold text-lg text-black">{topSite.name}</div>
               <div className="flex items-center gap-1.5 mt-1">
                 {renderStars(topSite.stars)}
                 <span className="text-sm font-semibold text-yellow-400 ml-1">{topSite.rating.toFixed(1)}</span>
