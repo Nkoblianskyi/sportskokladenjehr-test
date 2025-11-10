@@ -32,9 +32,9 @@ export function HrvatskaBettingTopOffersModal({ sites }: TopOffersModalProps) {
 
     for (let i = 0; i < maxStars; i++) {
       if (i < maxStars) {
-        starElements.push(<Star key={i} className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" />)
+        starElements.push(<Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />)
       } else {
-        starElements.push(<Star key={i} className="h-3.5 w-3.5 text-gray-300" />)
+        starElements.push(<Star key={i} className="h-5 w-5 text-gray-300" />)
       }
     }
 
@@ -77,8 +77,8 @@ export function HrvatskaBettingTopOffersModal({ sites }: TopOffersModalProps) {
             <div>
               <div className="flex items-center gap-1.5 mt-1">
                 {renderStars(topSite.stars)}
-                <span className="text-sm font-semibold text-yellow-400 ml-1">{topSite.rating.toFixed(1)}</span>
-                <span className="text-xs text-gray-600">({topSite.reviews})</span>
+                <span className="text-xl font-semibold text-yellow-400 ml-1">{topSite.rating.toFixed(1)}</span>
+                <span className="text-sm text-gray-600">({topSite.reviews})</span>
               </div>
             </div>
           </div>
