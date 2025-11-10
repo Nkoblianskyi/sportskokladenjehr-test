@@ -33,14 +33,14 @@ export function HrvatskaBettingRatingList({ sites }: RatingListProps) {
       return {
         container: "bg-white border-2 border-yellow-400",
         badge: "bg-yellow-400 text-gray-900 border-yellow-500",
-        rankText: "NAJBOLJI",
+        rankText: "TOP IZBOR",
         buttonClass: "bg-yellow-400 hover:bg-yellow-500 text-gray-900",
       }
     } else if (index === 1) {
       return {
         container: "bg-gradient-to-r from-white via-red-50 to-white border-2 border-blue-600",
         badge: "bg-blue-600 text-white border-blue-700",
-        rankText: "TOP IZBOR",
+        rankText: "POPULARAN",
         icon: null,
         buttonClass: "bg-green-600 hover:bg-green-700 text-white",
       }
@@ -82,7 +82,6 @@ export function HrvatskaBettingRatingList({ sites }: RatingListProps) {
                     <div
                       className={`${cardStyle.badge} px-4 py-2 rounded-full flex items-center gap-2 border-2 shadow-lg`}
                     >
-                      {BadgeIcon && <BadgeIcon className="h-4 w-4" />}
                       <span className="text-xs font-bold uppercase whitespace-nowrap">{cardStyle.rankText}</span>
                     </div>
                   </div>
