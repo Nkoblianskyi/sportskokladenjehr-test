@@ -1,0 +1,480 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* New Croatian sports theme with dark base and flag colors */
+  --background: oklch(0.15 0.015 240);
+  --foreground: oklch(0.98 0 0);
+  --card: oklch(0.18 0.02 240);
+  --card-foreground: oklch(0.98 0 0);
+  --popover: oklch(0.2 0.02 240);
+  --popover-foreground: oklch(0.98 0 0);
+
+  /* Croatian red as primary */
+  --primary: oklch(0.52 0.22 20);
+  --primary-foreground: oklch(0.98 0 0);
+
+  /* Croatian blue as secondary */
+  --secondary: oklch(0.48 0.19 245);
+  --secondary-foreground: oklch(0.98 0 0);
+
+  --muted: oklch(0.28 0.02 240);
+  --muted-foreground: oklch(0.65 0.02 240);
+
+  --accent: oklch(0.72 0.12 75);
+  --accent-foreground: oklch(0.15 0.015 240);
+
+  --destructive: oklch(0.48 0.2 20);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.32 0.02 240);
+  --input: oklch(0.28 0.02 240);
+  --ring: oklch(0.52 0.22 20);
+
+  --chart-1: oklch(0.52 0.22 20);
+  --chart-2: oklch(0.98 0 0);
+  --chart-3: oklch(0.48 0.19 245);
+  --chart-4: oklch(0.72 0.12 75);
+  --chart-5: oklch(0.38 0.15 180);
+
+  --radius: 0.5rem;
+
+  /* Croatian sports colors */
+  --croatia-red: oklch(0.52 0.22 20);
+  --croatia-white: oklch(0.98 0 0);
+  --croatia-blue: oklch(0.48 0.19 245);
+  --croatia-dark-blue: oklch(0.38 0.19 245);
+
+  /* Supporting sports colors */
+  --sports-dark: oklch(0.15 0.015 240);
+  --sports-charcoal: oklch(0.22 0.02 240);
+  --sports-gray: oklch(0.45 0.02 240);
+  --sports-light: oklch(0.88 0.01 240);
+  --sports-gold: oklch(0.72 0.12 75);
+  --sports-silver: oklch(0.68 0.02 240);
+}
+
+.dark {
+  --background: oklch(0.08 0.01 280);
+  --foreground: oklch(0.98 0 0);
+  --card: oklch(0.12 0.02 280);
+  --card-foreground: oklch(0.98 0 0);
+  --popover: oklch(0.15 0.02 280);
+  --popover-foreground: oklch(0.98 0 0);
+  --primary: oklch(0.65 0.24 25);
+  --primary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.7 0.18 45);
+  --secondary-foreground: oklch(0.12 0.01 280);
+  --muted: oklch(0.22 0.02 280);
+  --muted-foreground: oklch(0.65 0.02 280);
+  --accent: oklch(0.78 0.14 80);
+  --accent-foreground: oklch(0.12 0.01 280);
+  --destructive: oklch(0.55 0.2 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.28 0.02 280);
+  --input: oklch(0.22 0.02 280);
+  --ring: oklch(0.65 0.24 25);
+  --chart-1: oklch(0.65 0.24 25);
+  --chart-2: oklch(0.7 0.18 45);
+  --chart-3: oklch(0.78 0.14 80);
+  --chart-4: oklch(0.68 0.15 280);
+  --chart-5: oklch(0.6 0.15 180);
+  --sidebar: oklch(0.12 0.02 280);
+  --sidebar-foreground: oklch(0.98 0 0);
+  --sidebar-primary: oklch(0.65 0.24 25);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
+  --sidebar-accent: oklch(0.2 0.02 280);
+  --sidebar-accent-foreground: oklch(0.98 0 0);
+  --sidebar-border: oklch(0.28 0.02 280);
+  --sidebar-ring: oklch(0.65 0.24 25);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Journal color utilities */
+  --color-journal-black: var(--journal-black);
+  --color-journal-charcoal: var(--journal-charcoal);
+  --color-journal-gray: var(--journal-gray);
+  --color-journal-light-gray: var(--journal-light-gray);
+  --color-journal-border: var(--journal-border);
+  --color-journal-paper: var(--journal-paper);
+  --color-journal-white: var(--journal-white);
+  --color-journal-blue: var(--journal-blue);
+  --color-journal-blue-light: var(--journal-blue-light);
+  --color-journal-orange: var(--journal-orange);
+  --color-journal-green: var(--journal-green);
+  --color-journal-red: var(--journal-red);
+  --color-journal-purple: var(--journal-purple);
+  --color-journal-gold: var(--journal-gold);
+
+  /* Croatian color utilities */
+  --color-croatia-red: var(--croatia-red);
+  --color-croatia-white: var(--croatia-white);
+  --color-croatia-blue: var(--croatia-blue);
+  --color-croatia-dark-blue: var(--croatia-dark-blue);
+  --color-sports-dark: var(--sports-dark);
+  --color-sports-charcoal: var(--sports-charcoal);
+  --color-sports-gray: var(--sports-gray);
+  --color-sports-light: var(--sports-light);
+  --color-sports-gold: var(--sports-gold);
+  --color-sports-silver: var(--sports-silver);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Sports theme utility classes */
+.bg-journal-black {
+  background-color: var(--journal-black);
+}
+
+.bg-journal-charcoal {
+  background-color: var(--journal-charcoal);
+}
+
+.bg-journal-gray {
+  background-color: var(--journal-gray);
+}
+
+.bg-journal-light-gray {
+  background-color: var(--journal-light-gray);
+}
+
+.bg-journal-border {
+  background-color: var(--journal-border);
+}
+
+.bg-journal-paper {
+  background-color: var(--journal-paper);
+}
+
+.bg-journal-white {
+  background-color: var(--journal-white);
+}
+
+.text-journal-black {
+  color: var(--journal-black);
+}
+
+.text-journal-charcoal {
+  color: var(--journal-charcoal);
+}
+
+.text-journal-gray {
+  color: var(--journal-gray);
+}
+
+.text-journal-light-gray {
+  color: var(--journal-light-gray);
+}
+
+.text-journal-white {
+  color: var(--journal-white);
+}
+
+.border-journal-black {
+  border-color: var(--journal-black);
+}
+
+.border-journal-charcoal {
+  border-color: var(--journal-charcoal);
+}
+
+.border-journal-border {
+  border-color: var(--journal-border);
+}
+
+.bg-journal-blue {
+  background-color: var(--journal-blue);
+}
+
+.bg-journal-blue-light {
+  background-color: var(--journal-blue-light);
+}
+
+.bg-journal-orange {
+  background-color: var(--journal-orange);
+}
+
+.bg-journal-green {
+  background-color: var(--journal-green);
+}
+
+.bg-journal-red {
+  background-color: var(--journal-red);
+}
+
+.bg-journal-purple {
+  background-color: var(--journal-purple);
+}
+
+.bg-journal-gold {
+  background-color: var(--journal-gold);
+}
+
+.text-journal-blue {
+  color: var(--journal-blue);
+}
+
+.text-journal-blue-light {
+  color: var(--journal-blue-light);
+}
+
+.text-journal-orange {
+  color: var(--journal-orange);
+}
+
+.text-journal-green {
+  color: var(--journal-green);
+}
+
+.text-journal-red {
+  color: var(--journal-red);
+}
+
+.text-journal-purple {
+  color: var(--journal-purple);
+}
+
+.text-journal-gold {
+  color: var(--journal-gold);
+}
+
+.border-journal-blue {
+  border-color: var(--journal-blue);
+}
+
+.border-journal-orange {
+  border-color: var(--journal-orange);
+}
+
+.border-journal-green {
+  border-color: var(--journal-green);
+}
+
+.border-journal-gold {
+  border-color: var(--journal-gold);
+}
+
+.border-journal-red {
+  border-color: var(--journal-red);
+}
+
+/* Croatian flag color utilities */
+.bg-croatia-red {
+  background-color: var(--croatia-red);
+}
+
+.bg-croatia-white {
+  background-color: var(--croatia-white);
+}
+
+.bg-croatia-blue {
+  background-color: var(--croatia-blue);
+}
+
+.bg-croatia-dark-blue {
+  background-color: var(--croatia-dark-blue);
+}
+
+.text-croatia-red {
+  color: var(--croatia-red);
+}
+
+.text-croatia-white {
+  color: var(--croatia-white);
+}
+
+.text-croatia-blue {
+  color: var(--croatia-blue);
+}
+
+.border-croatia-red {
+  border-color: var(--croatia-red);
+}
+
+.border-croatia-blue {
+  border-color: var(--croatia-blue);
+}
+
+.bg-sports-dark {
+  background-color: var(--sports-dark);
+}
+
+.bg-sports-charcoal {
+  background-color: var(--sports-charcoal);
+}
+
+.bg-sports-gray {
+  background-color: var(--sports-gray);
+}
+
+.bg-sports-light {
+  background-color: var(--sports-light);
+}
+
+.bg-sports-gold {
+  background-color: var(--sports-gold);
+}
+
+.text-sports-dark {
+  color: var(--sports-dark);
+}
+
+.text-sports-gold {
+  color: var(--sports-gold);
+}
+
+.text-sports-gray {
+  color: var(--sports-gray);
+}
+
+.text-sports-light {
+  color: var(--sports-light);
+}
+
+/* Croatian flag gradient */
+.bg-gradient-croatia {
+  background: linear-gradient(135deg, var(--croatia-red) 0%, var(--croatia-white) 50%, var(--croatia-blue) 100%);
+}
+
+.bg-gradient-croatia-horizontal {
+  background: linear-gradient(
+    180deg,
+    var(--croatia-red) 0%,
+    var(--croatia-red) 33%,
+    var(--croatia-white) 33%,
+    var(--croatia-white) 66%,
+    var(--croatia-blue) 66%,
+    var(--croatia-blue) 100%
+  );
+}
+
+/* Sports dynamic gradients */
+.bg-gradient-sports-primary {
+  background: linear-gradient(135deg, var(--croatia-red) 0%, var(--croatia-dark-blue) 100%);
+}
+
+.bg-gradient-sports-hero {
+  background: linear-gradient(135deg, rgba(214, 31, 38, 0.95) 0%, rgba(23, 56, 113, 0.95) 100%);
+}
+
+.bg-gradient-sports-card {
+  background: linear-gradient(160deg, var(--sports-dark) 0%, var(--sports-charcoal) 100%);
+}
+
+/* Croatian checkered pattern accent */
+.checkered-accent {
+  background-image: repeating-linear-gradient(
+    0deg,
+    var(--croatia-red),
+    var(--croatia-red) 4px,
+    var(--croatia-white) 4px,
+    var(--croatia-white) 8px
+  );
+}
+
+.checkered-border {
+  border-image: repeating-linear-gradient(
+      90deg,
+      var(--croatia-red) 0px,
+      var(--croatia-red) 8px,
+      var(--croatia-white) 8px,
+      var(--croatia-white) 16px,
+      var(--croatia-blue) 16px,
+      var(--croatia-blue) 24px
+    )
+    4;
+}
+
+/* Athletic glow effects */
+.glow-croatia-red {
+  box-shadow: 0 0 25px rgba(214, 31, 38, 0.4), 0 0 50px rgba(214, 31, 38, 0.15);
+}
+
+.glow-croatia-blue {
+  box-shadow: 0 0 25px rgba(23, 56, 113, 0.4), 0 0 50px rgba(23, 56, 113, 0.15);
+}
+
+.glow-gold {
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.3), 0 0 50px rgba(255, 215, 0, 0.12);
+}
+
+/* Sports stripe accent */
+.sports-stripe {
+  position: relative;
+}
+
+.sports-stripe::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(
+    180deg,
+    var(--croatia-red) 0%,
+    var(--croatia-red) 50%,
+    var(--croatia-blue) 50%,
+    var(--croatia-blue) 100%
+  );
+}
+
+/* Dynamic energy effect for buttons */
+@keyframes pulse-croatia {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(214, 31, 38, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(214, 31, 38, 0);
+  }
+}
+
+.animate-pulse-croatia {
+  animation: pulse-croatia 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
