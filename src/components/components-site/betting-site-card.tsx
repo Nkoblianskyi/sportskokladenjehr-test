@@ -227,7 +227,7 @@ export function BettingSiteCard({ site, rank }: SiteCardProps) {
             <div className=" grid grid-cols-[41%_59%] gap-2 items-center justify-center relative z-10">
               {/* Logo Column */}
               <div className={`flex justify-center items-center`}>
-                <div className={`bg-black border-2 border-black w-full shadow-tech-soft relative ${rank === 1 ? 'mt-5' : 'mt-0'}`}>
+                <div className={`bg-black border-2 border-black w-full shadow-tech-soft relative ${rank <= 3 ? 'mt-5' : 'mt-0'}`}>
                   <img
                     src={site.logo || "/placeholder.svg"}
                     alt={site.name}
