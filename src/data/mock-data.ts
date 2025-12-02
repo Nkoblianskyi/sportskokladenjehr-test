@@ -23,7 +23,7 @@ export const casinos: Casino[] = [
     name: "Boomerang",
     logo: "/boomerang-bet.svg",
     rating: 9.8,
-    bonus: "Bonus na Prvu Uplatu 100% do 100€",
+    bonus: "Bonus na Prvu Uplatu 100% do 200€",
     welcomeOffer: "+ Tjedni Bonus za Dopunu 50% do 500€",
     features: ["Brza Isplata", "Mobilna Aplikacija", "15% Cashback"],
     isTopChoice: true,
