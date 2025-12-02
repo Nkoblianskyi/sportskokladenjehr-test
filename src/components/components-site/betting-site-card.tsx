@@ -215,7 +215,7 @@ export function BettingSiteCard({ site, rank }: SiteCardProps) {
               </div>
             )}
             {rank === 1 && (
-              <div className="px-2 py-1 text-[9px] font-bold text-white bg-gradient-to-r from-green-600 to-green-700 whitespace-nowrap rounded-bl-lg shadow-lg border-2 border-green-500">
+              <div className="px-2 py-1 text-sm font-bold text-white bg-gradient-to-r from-green-600 to-green-700 whitespace-nowrap rounded-bl-lg shadow-lg border-2 border-green-500">
                 EKSKLUZIVNA PONUDA!
               </div>
             )}
@@ -237,7 +237,7 @@ export function BettingSiteCard({ site, rank }: SiteCardProps) {
               </div>
 
               {/* Bonus Column */}
-              <div className="text-center">
+              <div className="text-center pt-2">
                 <div className="text-xs text-gray-600 uppercase font-bold mb-1 tech-subheading">BONUS DOBRODOŠLICE</div>
                 <div className="text-sm font-bold text-black leading-tight mb-1 tech-heading">{site.bonus}</div>
                 <div className="text-sm font-bold text-black leading-tight tech-heading">{site.welcomeOffer}</div>
