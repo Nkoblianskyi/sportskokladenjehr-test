@@ -69,13 +69,13 @@ export function BettingSiteCard({ site, rank }: SiteCardProps) {
       >
         <Link href={site.link} target="_blank" rel="noopener referrer" className="block">
           {rank <= 3 && (
-            <div className="absolute top-0 left-0 z-30 flex flex-col gap-1">
-              <div className="px-4 py-1 text-xs font-bold text-black bg-yellow-400 whitespace-nowrap">
+            <div className="absolute top-0 left-0 z-30 flex flex-col gap-1.5">
+              <div className="px-4 py-1.5 text-xs font-bold text-black bg-yellow-400 whitespace-nowrap rounded-br-lg shadow-lg border-2 border-yellow-500">
                 {getRankLabel(rank)}
               </div>
               {rank === 1 && (
-                <div className="px-4 py-1 text-xs font-bold text-white bg-blue-700 whitespace-nowrap">
-                  Ekskluzivna Ponuda!
+                <div className="px-4 py-1.5 text-xs font-bold text-white bg-gradient-to-r from-green-600 to-green-700 whitespace-nowrap rounded-br-lg shadow-lg border-2 border-green-500 animate-pulse">
+                  ⚡ EKSKLUZIVNA PONUDA ⚡
                 </div>
               )}
             </div>
@@ -141,13 +141,13 @@ export function BettingSiteCard({ site, rank }: SiteCardProps) {
       <div className="hidden md:block lg:hidden tech-card border border-gray-300 relative overflow-hidden cursor-pointer mb-2 mx-4">
         <Link href={site.link} target="_blank" rel="noopener referrer" className="block">
           {rank <= 3 && (
-            <div className="absolute top-0 left-0 z-30 flex flex-col gap-1">
-              <div className="px-3 py-1 text-xs font-bold text-black bg-yellow-400 whitespace-nowrap">
+            <div className="absolute top-0 left-0 z-30 flex flex-col gap-1.5">
+              <div className="px-3 py-1 text-xs font-bold text-black bg-yellow-400 whitespace-nowrap rounded-br-lg shadow-lg border-2 border-yellow-500">
                 {getRankLabel(rank)}
               </div>
               {rank === 1 && (
-                <div className="px-3 py-1 text-xs font-bold text-black bg-blue-700 whitespace-nowrap">
-                  Ekskluzivna Ponuda!
+                <div className="px-3 py-1 text-[10px] font-bold text-white bg-gradient-to-r from-green-600 to-green-700 whitespace-nowrap rounded-br-lg shadow-lg border-2 border-green-500 animate-pulse">
+                  ⚡ EKSKLUZIVNA ⚡
                 </div>
               )}
             </div>
@@ -210,12 +210,12 @@ export function BettingSiteCard({ site, rank }: SiteCardProps) {
         <Link href={site.link} target="_blank" rel="noopener referrer" className="block">
           {rank <= 3 && (
             <div className="absolute top-0 left-0 z-30 flex flex-col gap-1">
-              <div className="px-3 py-1 text-xs font-bold text-black bg-yellow-400 whitespace-nowrap">
+              <div className="px-3 py-1 text-xs font-bold text-black bg-yellow-400 whitespace-nowrap rounded-br-lg shadow-lg border-2 border-yellow-500">
                 {getRankLabel(rank)}
               </div>
               {rank === 1 && (
-                <div className="px-3 py-1 text-xs font-bold text-white bg-blue-700 whitespace-nowrap">
-                  Ekskluzivna Ponuda!
+                <div className="px-3 py-1 text-[10px] font-bold text-white bg-gradient-to-r from-green-600 to-green-700 whitespace-nowrap rounded-br-lg shadow-lg border-2 border-green-500 animate-pulse">
+                  ⚡ EKSKLUZIVNA ⚡
                 </div>
               )}
             </div>
