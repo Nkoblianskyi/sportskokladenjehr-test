@@ -24,7 +24,7 @@ export const casinos: Casino[] = [
     logo: "/boomerang-bet.svg",
     rating: 9.8,
     bonus: "Bonus na Prvu Uplatu 100% do 200€",
-    welcomeOffer: "",
+    welcomeOffer: "+ WAGER x5 SINGLE MID ODDS 1.8",
     features: ["Brza Isplata", "Mobilna Aplikacija", "15% Cashback"],
     isTopChoice: true,
     url: "https://qualityboost.top/xf5nknpc",
