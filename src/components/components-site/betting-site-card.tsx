@@ -68,7 +68,7 @@ export function BettingSiteCard({ site, rank }: SiteCardProps) {
         className={`hidden lg:block tech-card ${rank === 1 ? "border-2 border-yellow-400 tech-glow" : "border border-gray-300"} relative overflow-hidden cursor-pointer mb-2 mx-4`}
       >
         <Link href={site.link} target="_blank" rel="noopener referrer" className="block">
-          {rank <= 4 && (
+          {rank <= 3 && (
             <div className="absolute top-0 left-0 z-30 flex flex-col gap-1">
               <div className="tech-badge px-4 py-1 text-xs font-bold text-black bg-yellow-400 whitespace-nowrap">
                 {getRankLabel(rank)}
@@ -140,7 +140,7 @@ export function BettingSiteCard({ site, rank }: SiteCardProps) {
       {/* Tablet Layout */}
       <div className="hidden md:block lg:hidden tech-card border border-gray-300 relative overflow-hidden cursor-pointer mb-2 mx-4">
         <Link href={site.link} target="_blank" rel="noopener referrer" className="block">
-          {rank <= 4 && (
+          {rank <= 3 && (
             <div className="absolute top-0 left-0 z-30 flex flex-col gap-1">
               <div className="tech-badge px-3 py-1 text-xs font-bold text-black bg-yellow-400 whitespace-nowrap">
                 {getRankLabel(rank)}
@@ -208,7 +208,7 @@ export function BettingSiteCard({ site, rank }: SiteCardProps) {
       {/* Mobile Layout */}
       <div className="md:hidden tech-card relative overflow-hidden cursor-pointer mb-1 mx-2">
         <Link href={site.link} target="_blank" rel="noopener referrer" className="block">
-          {rank <= 4 && (
+          {rank <= 3 && (
             <div className="absolute top-0 left-0 z-30 flex flex-col gap-1">
               <div className="tech-badge px-3 py-1 text-xs font-bold text-black bg-yellow-400 whitespace-nowrap">
                 {getRankLabel(rank)}
