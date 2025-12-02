@@ -224,7 +224,7 @@ export function BettingSiteCard({ site, rank }: SiteCardProps) {
           {/* Main Content */}
           <div className={` p-2 relative tech-white`}>
             {/* Content Grid */}
-            <div className=" grid grid-cols-[41%_59%] gap-2 items-center justify-center relative z-10 pt-2">
+            <div className=" grid grid-cols-[41%_59%] gap-2 items-center justify-center relative z-10">
               {/* Logo Column */}
               <div className={`flex justify-center items-center`}>
                 <div className="bg-black border-2 mt-5 border-black w-full shadow-tech-soft relative">
@@ -237,7 +237,7 @@ export function BettingSiteCard({ site, rank }: SiteCardProps) {
               </div>
 
               {/* Bonus Column */}
-              <div className={`text-center ${rank === 1 ? 'mt-8' : ''}`}>
+              <div className={`text-center ${rank === 1 ? 'mt-4' : ''}`}>
                 <div className="text-xs text-gray-600 uppercase font-bold mb-1 tech-subheading">BONUS DOBRODOŠLICE</div>
                 <div className="text-sm font-bold text-black leading-tight mb-1 tech-heading">{site.bonus}</div>
                 <div className="text-sm font-bold text-black leading-tight tech-heading">{site.welcomeOffer}</div>
