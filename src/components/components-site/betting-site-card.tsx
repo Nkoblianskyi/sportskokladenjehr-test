@@ -82,10 +82,10 @@ export function BettingSiteCard({ site, rank }: SiteCardProps) {
           )}
 
           {/* Main Content */}
-          <div className="h-40 flex items-center py-6 pl-6 pr-6 tech-white relative">
+          <div className={`${rank === 1 ? 'h-48' : 'h-40'} flex items-center py-6 pl-6 pr-6 tech-white relative`}>
             {/* PLATFORM - 30% */}
             <div className="flex-[0_0_22%] flex justify-center items-center h-full relative z-10">
-              <div className="bg-black border-2 border-black p-4 shadow-tech-medium relative mt-4">
+              <div className={`bg-black border-2 border-black p-4 shadow-tech-medium relative ${rank === 1 ? 'mt-12' : 'mt-4'}`}>
                 <img
                   src={site.logo || "/placeholder.svg"}
                   alt={site.name}
@@ -153,11 +153,11 @@ export function BettingSiteCard({ site, rank }: SiteCardProps) {
             </div>
           )}
 
-          <div className={`pt-6 pb-4 ${rank <= 4 ? "pl-8 pr-4" : "px-4"} tech-white relative`}>
+          <div className={`${rank === 1 ? 'pt-10' : 'pt-6'} pb-4 ${rank <= 4 ? "pl-8 pr-4" : "px-4"} tech-white relative`}>
             <div className="grid grid-cols-12 gap-2 items-center relative z-10">
               {/* Logo - 3 колонки */}
               <div className="col-span-3 flex justify-center">
-                <div className="bg-black border-2 border-black p-2 shadow-tech-soft w-full mt-4 relative">
+                <div className={`bg-black border-2 border-black p-2 shadow-tech-soft w-full relative ${rank === 1 ? 'mt-8' : 'mt-4'}`}>
                   <img src={site.logo || "/placeholder.svg"} alt={site.name} className="w-full h-12 object-contain" />
                 </div>
               </div>
@@ -222,11 +222,11 @@ export function BettingSiteCard({ site, rank }: SiteCardProps) {
           )}
 
           {/* Main Content */}
-          <div className="p-2 relative tech-white">
+          <div className={`${rank === 1 ? 'pt-4' : 'p-2'} p-2 relative tech-white`}>
             {/* Content Grid */}
             <div className="grid grid-cols-2 gap-2 items-center justify-center relative z-10">
               {/* Logo Column */}
-              <div className="flex justify-center items-center mt-5">
+              <div className={`flex justify-center items-center ${rank === 1 ? 'mt-10' : 'mt-5'}`}>
                 <div className="bg-black border-2 border-black w-full p-2 shadow-tech-soft relative">
                   <img
                     src={site.logo || "/placeholder.svg"}
