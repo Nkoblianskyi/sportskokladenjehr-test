@@ -104,7 +104,7 @@ export function EditorChoiceModal({ bettingSites }: EditorChoiceModalProps) {
           <div className="tech-card overflow-hidden transition-all duration-300 hover:scale-105 flex flex-col w-full max-w-[380px] h-[380px] border-4 border-yellow-400 shadow-tech-glow bg-white relative">
             {/* Exclusive Badge */}
             <div className="absolute top-0 left-0 z-10 flex flex-col gap-1">
-              <div className="px-4 py-2 text-sm font-bold text-white bg-gradient-to-r from-green-600 to-green-700 shadow-xl border-2 border-green-500 rounded-br-xl animate-pulse">
+              <div className="px-4 py-2 text-sm font-bold text-white bg-gradient-to-r from-green-600 to-green-700 shadow-xl border-2 border-green-500 rounded-br-xl">
                 EKSKLUZIVNA PONUDA
               </div>
             </div>
@@ -133,14 +133,12 @@ export function EditorChoiceModal({ bettingSites }: EditorChoiceModalProps) {
 
               {/* Bonus Amount */}
               <div className="flex-1 flex flex-col justify-center mb-4">
-                <div className="text-xs text-gray-600 font-medium mb-3 tech-subheading uppercase">BONUS DOBRODOŠLICE</div>
-                <div className="bg-gradient-to-r from-green-50 to-yellow-50 border-2 border-green-500 rounded-lg p-4 shadow-lg">
-                  <div className="text-xl font-black text-green-800 tracking-wider leading-tight tech-heading mb-2">
-                    {topSite.bonus}
-                  </div>
-                  <div className="text-lg font-bold leading-tight tech-heading text-green-700">
-                    {topSite.welcomeOffer}
-                  </div>
+                <div className="text-xs text-gray-600 font-medium mb-2 tech-subheading">BONUS DOBRODOŠLICE</div>
+                <div className="text-lg font-black text-black tracking-wider leading-tight tech-heading mb-2">
+                  {topSite.bonus}
+                </div>
+                <div className="text-base font-bold leading-tight tech-heading text-portuguese-red">
+                  {topSite.welcomeOffer}
                 </div>
               </div>
 
