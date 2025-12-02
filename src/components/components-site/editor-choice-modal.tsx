@@ -151,7 +151,7 @@ export function EditorChoiceModal({ bettingSites }: EditorChoiceModalProps) {
               <div>
                 <Link href={topSite.link || "#"} target="_blank" rel="noopener referrer">
                   <Button
-                    className="text-white font-bold border-2 py-3 px-6 text-sm w-full shadow-tech-medium transition-all duration-300 hover:scale-105 tech-subheading"
+                    className="text-white font-bold border-2 py-3 px-6 text-base w-full shadow-tech-medium transition-all duration-300 hover:scale-105 tech-subheading"
                     style={{ backgroundColor: "#006600", borderColor: "#004400" }}
                     onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#005500")}
                     onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#006600")}

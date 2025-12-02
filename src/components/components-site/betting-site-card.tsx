@@ -261,7 +261,7 @@ export function BettingSiteCard({ site, rank }: SiteCardProps) {
 
               {/* Button Column */}
               <div className="flex justify-center pr-4">
-                <Button className="text-white bg-green-700 border-green-700 border-2 px-4 py-4 text-[11px] w-full font-bold tech-subheading shadow-lg hover:bg-green-800">
+                <Button className="text-white bg-green-700 border-green-700 border-2 px-4 py-4 text-[10px] w-full font-bold tech-subheading shadow-lg hover:bg-green-800">
                   PREUZMI BONUS
                 </Button>
               </div>
