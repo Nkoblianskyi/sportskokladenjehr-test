@@ -237,7 +237,7 @@ export function BettingSiteCard({ site, rank }: SiteCardProps) {
               </div>
 
               {/* Bonus Column */}
-              <div className="text-center pt-4">
+              <div className={`text-center ${rank === 1 ? 'mt-8' : ''}`}>
                 <div className="text-xs text-gray-600 uppercase font-bold mb-1 tech-subheading">BONUS DOBRODOŠLICE</div>
                 <div className="text-sm font-bold text-black leading-tight mb-1 tech-heading">{site.bonus}</div>
                 <div className="text-sm font-bold text-black leading-tight tech-heading">{site.welcomeOffer}</div>
