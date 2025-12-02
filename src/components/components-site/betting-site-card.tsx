@@ -222,9 +222,9 @@ export function BettingSiteCard({ site, rank }: SiteCardProps) {
           )}
 
           {/* Main Content */}
-          <div className={`${rank === 1 ? 'pt-4' : 'p-2'} p-2 relative tech-white`}>
+          <div className={` p-2 relative tech-white`}>
             {/* Content Grid */}
-            <div className="grid grid-cols-2 gap-2 items-center justify-center relative z-10">
+            <div className={` ${rank === 1 ? 'pt-4' : ''} grid grid-cols-2 gap-2 items-center justify-center relative z-10`}>
               {/* Logo Column */}
               <div className={`flex justify-center items-center ${rank === 1 ? 'mt-10' : 'mt-5'}`}>
                 <div className="bg-black border-2 border-black w-full p-2 shadow-tech-soft relative">
