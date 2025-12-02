@@ -231,7 +231,7 @@ export function BettingSiteCard({ site, rank }: SiteCardProps) {
                   <img
                     src={site.logo || "/placeholder.svg"}
                     alt={site.name}
-                    className="h-full w-auto object-contain px-4"
+                    className="h-14 w-auto object-contain px-4"
                   />
                 </div>
               </div>
