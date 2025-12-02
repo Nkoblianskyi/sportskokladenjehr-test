@@ -155,6 +155,12 @@
   --color-sports-light: var(--sports-light);
   --color-sports-gold: var(--sports-gold);
   --color-sports-silver: var(--sports-silver);
+
+    /* Croatian colors */
+  --color-croatia-red: var(--croatia-red);
+  --color-croatia-blue: var(--croatia-blue);
+  --color-croatia-gold: var(--croatia-gold);
+  --color-croatia-dark: var(--croatia-dark);
 }
 
 @layer base {
@@ -477,4 +483,269 @@
 
 .animate-pulse-croatia {
   animation: pulse-croatia 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+
+/* Hi-Tech Utility Classes */
+/* Replaced shadow-tech-medium with direct CSS property */
+.tech-card {
+  @apply bg-white border border-gray-200;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.tech-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.8), transparent);
+  animation: tech-scan 3s ease-in-out infinite;
+}
+
+/* Replaced shadow-tech-glow with direct CSS property */
+.tech-card:hover {
+  transform: translateY(-2px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6), 0 0 30px rgba(255, 215, 0, 0.4);
+}
+
+/* Replaced @apply bg-tech-gold with direct CSS background-color */
+.tech-button {
+  /* Updated gold color to #FFD700 */
+  background-color: #ffd700;
+  @apply text-black font-bold border border-black;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tech-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.tech-button:hover::before {
+  left: 100%;
+}
+
+/* Replaced shadow-tech-glow with direct CSS property */
+.tech-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6), 0 0 30px rgba(255, 215, 0, 0.4);
+}
+
+/* Replaced @apply border-tech-gold with direct CSS border-color */
+.tech-header {
+  @apply bg-black text-white;
+  /* Updated gold color to #FFD700 */
+  border-bottom: 2px solid #ffd700;
+  background-image: linear-gradient(rgba(255, 215, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 215, 0, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Replaced @apply bg-tech-red with direct CSS background-color */
+.tech-rank {
+  background-color: #c8102e;
+  @apply text-white font-bold;
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 100%, 8px 100%);
+}
+
+.bg-croatian-blue {
+  background-color: #0033a0;
+}
+
+.bg-croatian-white {
+  background-color: #ffffff;
+}
+
+.bg-tech-gold {
+  background-color: #ffd700;
+}
+
+.bg-tech-green {
+  background-color: #006600;
+}
+
+.bg-tech-red {
+  background-color: #c8102e;
+}
+
+.bg-tech-blue {
+  background-color: #0033a0;
+}
+
+.bg-tech-black {
+  background-color: #000000;
+}
+
+.bg-tech-white {
+  background-color: #ffffff;
+}
+
+.bg-croatian-red {
+  background-color: #c8102e;
+}
+/* Replaced @apply bg-tech-gold with direct CSS background-color */
+.tech-badge {
+  /* Updated gold color to #FFD700 */
+  background-color: #ffd700;
+  @apply text-black font-bold;
+  clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+}
+
+.tech-glow {
+  /* Updated gold glow to #FFD700 */
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6), 0 0 30px rgba(255, 215, 0, 0.4), 0 0 45px rgba(255, 215, 0, 0.2);
+}
+
+.tech-red-glow {
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.3), 0 0 10px rgba(255, 0, 0, 0.2), 0 0 15px rgba(255, 0, 0, 0.1);
+}
+
+.tech-grid-bgg {
+  background-image: linear-gradient(rgba(255, 215, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 215, 0, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.tech-grid-bg {
+  background-image: linear-gradient(rgba(255, 215, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 215, 0, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.tech-scanner {
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-scanner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.3), transparent);
+  animation: tech-scan 2s ease-in-out infinite;
+}
+
+/* Typography */
+.tech-heading {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+}
+
+.tech-subheading {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.tech-body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tech-card::before {
+    height: 1px;
+  }
+}
+
+/* Keyframes for glow-pulse */
+@keyframes glow-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.6), 0 0 30px rgba(255, 215, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 1), 0 0 40px rgba(255, 215, 0, 0.8), 0 0 60px rgba(255, 215, 0, 0.6);
+  }
+}
+
+/* Adding Croatian color classes */
+.croatian-green {
+  color: #006600;
+}
+
+.croatian-green-bg {
+  background-color: #006600;
+}
+
+.croatian-green-bg:hover {
+  background-color: #005500;
+}
+
+.croatian-green-border {
+  border-color: #006600;
+}
+
+.croatian-gold {
+  color: #ffd700;
+}
+
+.croatian-gold-bg {
+  background-color: #ffd700;
+}
+
+.croatian-gold-border {
+  border-color: #ffd700;
+}
+
+.tech-white {
+  background-color: #ffffff;
+}
+
+.tech-black {
+  color: #000000;
+}
+
+.tech-black-bg {
+  background-color: #000000;
+}
+
+.tech-black-border {
+  border-color: #000000;
+}
+
+.tech-gray-200 {
+  border-color: #e5e7eb;
+}
+
+.tech-gray-300 {
+  border-color: #d1d5db;
+}
+
+.tech-gray-400 {
+  color: #9ca3af;
+}
+
+.tech-gray-600 {
+  color: #4b5563;
+}
+
+.star-empty {
+  fill: #e5e7eb;
+  color: #9ca3af;
+}
+
+.star-filled {
+  fill: #ffd700;
+  color: #ffd700;
 }
