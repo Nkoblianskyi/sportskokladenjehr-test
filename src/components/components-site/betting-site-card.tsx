@@ -53,10 +53,8 @@ export function BettingSiteCard({ site, rank }: SiteCardProps) {
       case 1:
         return "Najbolja Kladionica"
       case 2:
-        return "Ekskluzivna Ponuda"
-      case 3:
         return "Preporučeno"
-      case 4:
+      case 3:
         return "Trendovi"
       default:
         return "Ocijenjeno"
@@ -71,10 +69,15 @@ export function BettingSiteCard({ site, rank }: SiteCardProps) {
       >
         <Link href={site.link} target="_blank" rel="noopener referrer" className="block">
           {rank <= 4 && (
-            <div className="absolute top-0 left-0 z-30">
+            <div className="absolute top-0 left-0 z-30 flex flex-col gap-1">
               <div className="tech-badge px-4 py-1 text-xs font-bold text-black bg-yellow-400 whitespace-nowrap">
                 {getRankLabel(rank)}
               </div>
+              {rank === 1 && (
+                <div className="tech-badge px-4 py-1 text-xs font-bold text-white bg-green-700 whitespace-nowrap">
+                  Ekskluzivna Ponuda
+                </div>
+              )}
             </div>
           )}
 
@@ -138,10 +141,15 @@ export function BettingSiteCard({ site, rank }: SiteCardProps) {
       <div className="hidden md:block lg:hidden tech-card border border-gray-300 relative overflow-hidden cursor-pointer mb-2 mx-4">
         <Link href={site.link} target="_blank" rel="noopener referrer" className="block">
           {rank <= 4 && (
-            <div className="absolute top-0 left-0 z-30">
+            <div className="absolute top-0 left-0 z-30 flex flex-col gap-1">
               <div className="tech-badge px-3 py-1 text-xs font-bold text-black bg-yellow-400 whitespace-nowrap">
                 {getRankLabel(rank)}
               </div>
+              {rank === 1 && (
+                <div className="tech-badge px-3 py-1 text-xs font-bold text-white bg-green-700 whitespace-nowrap">
+                  Ekskluzivna Ponuda
+                </div>
+              )}
             </div>
           )}
 
@@ -201,10 +209,15 @@ export function BettingSiteCard({ site, rank }: SiteCardProps) {
       <div className="md:hidden tech-card relative overflow-hidden cursor-pointer mb-1 mx-2">
         <Link href={site.link} target="_blank" rel="noopener referrer" className="block">
           {rank <= 4 && (
-            <div className="absolute top-0 left-0 z-30">
+            <div className="absolute top-0 left-0 z-30 flex flex-col gap-1">
               <div className="tech-badge px-3 py-1 text-xs font-bold text-black bg-yellow-400 whitespace-nowrap">
                 {getRankLabel(rank)}
               </div>
+              {rank === 1 && (
+                <div className="tech-badge px-3 py-1 text-xs font-bold text-white bg-green-700 whitespace-nowrap">
+                  Ekskluzivna Ponuda
+                </div>
+              )}
             </div>
           )}
 
